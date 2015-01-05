@@ -1,0 +1,6 @@
+---
+- name: Install packages required for ceph node
+  apt: pkg={{item}} state=latest
+  with_items:
+    - ntp
+    - openssh-server

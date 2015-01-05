@@ -1,0 +1,12 @@
+---
+- hosts: all 
+  remote_user: vagrant
+  sudo: yes
+  vars:
+    ceph_user: "cephuser"
+    ceph_stable_release: "firefly"
+    os_codename: "trusty"
+  tasks:
+  - include: tasks/devtools.yml
+  - include: tasks/node-prerequisites.yml
+  - include: tasks/ceph-user.yml

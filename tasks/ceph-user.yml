@@ -1,0 +1,6 @@
+---
+- name: Create ceph user
+  user: name={{ceph_user}} shell=/bin/bash group=admin generate_ssh_key=yes 
+
+- name: Update ceph sudoers file
+  template: src=../templates/ceph-sudoers.j2 dest=/etc/sudoers.d/{{ceph_user}} owner=root mode=440
