@@ -1,5 +1,5 @@
 ---
-- name: Install pycurl-import
+- name: Install python-pycurl
   apt: pkg=python-pycurl
 
 - name: Add ceph apt key
@@ -8,6 +8,16 @@
 - name: Add ceph repository
   apt_repository: repo='deb http://ceph.com/debian-{{ceph_stable_release}}/ {{os_codename}} main'
 
-- name: Install ceph deploy
-  apt: pkg=ceph-deploy 
+- name: Install ceph
+  apt: >
+   pkg={{ item }}
+   state=latest
+  with_items:
+    - ceph
+    - ceph-common
+    - ceph-fs-common
+    - ceph-fuse
+    - ceph-mds
+    - libcephfs1 
+    - gdisk
 

@@ -5,8 +5,9 @@
   vars:
     ceph_user: "cephuser"
     ceph_stable_release: "firefly"
-    os_codename: "trusty"
+    os_codename: "precise"
   tasks:
   - include: tasks/devtools.yml
   - include: tasks/node-prerequisites.yml
   - include: tasks/ceph-user.yml
+  - include: tasks/prepare.yml

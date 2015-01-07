@@ -1,9 +1,9 @@
 ---
 - name: Add node1 to hosts file
-  lineinfile: dest=/etc/hosts line="192.168.1.100 ceph-node-01.foo"
+  lineinfile: dest=/etc/hosts line="192.168.1.100 ceph-node-01.foo node1"
 
 - name: Add node2 to hosts file
-  lineinfile: dest=/etc/hosts line="192.168.1.101 ceph-node-02.foo"
+  lineinfile: dest=/etc/hosts line="192.168.1.101 ceph-node-02.foo node2"
 
 - name: Add node3 to hosts file
-  lineinfile: dest=/etc/hosts line="192.168.1.102 ceph-node-03.foo"
+  lineinfile: dest=/etc/hosts line="192.168.1.102 ceph-node-03.foo node3"

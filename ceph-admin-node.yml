@@ -5,13 +5,13 @@
   vars:
     ceph_user: "cephuser"
     ceph_stable_release: "firefly"
-    os_codename: "trusty"
+    os_codename: "precise"
   tasks:
   - include: tasks/prepare.yml
   - include: tasks/devtools.yml
-  - include: tasks/ceph-user.yml
+  - include: tasks/ceph-admin-user.yml
   - include: tasks/ceph-hosts.yml
 
   - name: Fetch generated SSH key
-    fetch: src=/home/{{ceph_user}}/.ssh/id_rsa.pub dest=files/id_rsa.pub flat=yes 
+    fetch: src=/home/{{ceph_user}}/.ssh/id_rsa.pub dest=fetch/id_rsa.pub flat=yes 
 

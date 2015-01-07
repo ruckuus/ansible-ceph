@@ -1,0 +1,3 @@
+---
+- name: Create node ceph user
+  user: name={{ceph_user}} shell=/bin/bash group=admin generate_ssh_key=yes 
