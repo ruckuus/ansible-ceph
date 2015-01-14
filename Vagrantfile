@@ -37,4 +37,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       ansible.playbook = "ceph-cluster-node.yml"
     end
   end
+
+  config.vm.define "ceph_mon01" do |ans|
+    ans.vm.hostname = "ceph-node-04.foo"
+    ans.vm.network "private_network", ip: "192.168.1.103"
+    ans.vm.provision "ansible" do |ansible|
+      ansible.playbook = "ceph-cluster-node.yml"
+    end
+  end
 end

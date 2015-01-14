@@ -11,3 +11,4 @@
   - include: tasks/node-prerequisites.yml
   - include: tasks/ceph-user.yml
   - include: tasks/prepare.yml
+  - include: tasks/ceph-hosts.yml

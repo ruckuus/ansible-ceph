@@ -15,9 +15,9 @@
   with_items:
     - ceph
     - ceph-common
+    - ceph-deploy
     - ceph-fs-common
     - ceph-fuse
     - ceph-mds
     - libcephfs1 
     - gdisk
-
